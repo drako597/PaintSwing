@@ -19,10 +19,10 @@ import javax.swing.JLabel;
 */
 class Paint extends JFrame {
 
-	protected final Area area = new Area();
-	protected final DrawManager drawManager = new DrawManager(area);
-	protected final Menu menuBar = new Menu(drawManager,this);
-	protected int x = 0, y = 0;
+	private final Area area = new Area();
+	private final DrawManager drawManager = new DrawManager(area);
+	private final Menu menuBar = new Menu(drawManager,this);
+	private int x = 0, y = 0;
 
     public Paint() {
         super("Paint Swng");

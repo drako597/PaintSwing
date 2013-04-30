@@ -17,10 +17,10 @@ import javax.swing.*;
 * 
 */
 public class Menu {
-	protected Paint paint;
-	protected JMenuBar bar = new JMenuBar();
-	protected FileDialog dialogWindow;
-	protected DrawManager drawManager;
+	private Paint paint;
+	private JMenuBar bar = new JMenuBar();
+	private FileDialog dialogWindow;
+	private DrawManager drawManager;
 	
 	/**
 	 * 

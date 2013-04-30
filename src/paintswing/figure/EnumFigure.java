@@ -3,8 +3,6 @@
  */
 package paintswing.figure;
 
-import java.awt.Color;
-
 import paintswing.Point;
 
 /**

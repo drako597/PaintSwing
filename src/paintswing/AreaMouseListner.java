@@ -14,11 +14,11 @@ import java.awt.event.MouseEvent;
  */
 public class AreaMouseListner extends MouseAdapter {
 
-    protected DrawManager drawManager;
-    protected int x;
-    protected int y;
-    protected int x2;
-    protected int y2;
+	private DrawManager drawManager;
+	private int x;
+	private int y;
+	private int x2;
+	private int y2;
 
     public AreaMouseListner(DrawManager drawManager) {
         this.drawManager = drawManager;

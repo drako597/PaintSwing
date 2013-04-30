@@ -17,11 +17,11 @@ import paintswing.Point;
 */
 public abstract class AbstractFigure implements Figure {
 
-    protected int width;
-    protected int height;
-    protected int x;
-    protected int y;
-    protected Color color;
+	protected int width;
+	protected int height;
+	protected int x;
+	protected int y;
+	protected Color color;
 
     public AbstractFigure(Point point) {
         this.width = point.getX();

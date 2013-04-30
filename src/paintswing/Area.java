@@ -18,7 +18,7 @@ import paintswing.figure.*;
 */
 class Area extends JPanel {
 
-    protected final Collection<Figure> figle = new ArrayList<>();
+    private final Collection<Figure> figle = new ArrayList<>();
     Image img;
 
     public Area() {
@@ -39,4 +39,9 @@ class Area extends JPanel {
         figle.removeAll(figle);
         this.repaint();
     }
+
+	public Collection<Figure> getCollectionFigle() {
+		// TODO Auto-generated method stub
+		return figle;
+	}
 }

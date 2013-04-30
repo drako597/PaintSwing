@@ -5,6 +5,8 @@
 package paintswing;
 
 import java.awt.Color;
+import java.util.Collection;
+
 import paintswing.figure.Circle;
 import paintswing.figure.EnumFigure;
 import paintswing.figure.Figure;
@@ -19,13 +21,15 @@ import paintswing.figure.Rectangle;
 */
 class DrawManager {
 
-	protected Area area;
-	protected String figle = "LINE";
-	protected Color color;
+	private Area area;
+	private String figle = "LINE";
+	private Color color;
+	private Collection<Figure> collectionFigle;
 	
 
     public DrawManager(Area area) {
-        this.area = area;
+       this.area = area;
+       collectionFigle= area.getCollectionFigle();
     }
 
     public void draw(Point point) {
@@ -43,7 +47,7 @@ class DrawManager {
                 break;
         }*/
     	point.setColor(color);
-    	area.figle.add(EnumFigure.valueOf(figle).create(point));
+    	collectionFigle.add(EnumFigure.valueOf(figle).create(point));
         area.repaint();
     }
 
