@@ -11,9 +11,11 @@ import javax.swing.JPanel;
 import paintswing.figure.*;
 
 /**
- *
- * @author drako597
- */
+*
+* @author drako597
+* @version 1.0
+* 
+*/
 class Area extends JPanel {
 
     protected final Collection<Figure> figle = new ArrayList<>();

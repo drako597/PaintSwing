@@ -12,10 +12,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- *
- * @author Karol Gajda
- *
- */
+*
+* @author drako597
+* @version 1.0
+* 
+*/
 class Paint extends JFrame {
 
 	protected final Area area = new Area();

@@ -7,14 +7,18 @@ package paintswing.figure;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
+import paintswing.Point;
+
 /**
- *
- * @author drako597
- */
+*
+* @author drako597
+* @version 1.0
+* 
+*/
 public class Line extends AbstractFigure {
 
-    public Line(int x, int y, int x2, int y2, Color color) {
-        super(x, y, x2, y2, color);
+    public Line(Point point) {
+        super(point);
     }
 
     @Override

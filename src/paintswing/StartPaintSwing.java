@@ -8,9 +8,11 @@ package paintswing;
 import javax.swing.SwingUtilities;
 
 /**
- * Klasa main
- * @author Karol Gajda
- */
+*
+* @author drako597
+* @version 1.0
+* 
+*/
 public class StartPaintSwing {
 
     /**

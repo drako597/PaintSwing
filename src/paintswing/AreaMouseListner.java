@@ -4,6 +4,7 @@
  */
 package paintswing;
 
+import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -33,7 +34,7 @@ public class AreaMouseListner extends MouseAdapter {
     public void mouseReleased(MouseEvent e) {
         x2 = e.getX();
         y2 = e.getY();
-        drawManager.draw(x, y, x2, y2);
+        drawManager.draw(new Point(x, y, x2, y2));
 
 
     }

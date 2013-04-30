@@ -6,25 +6,30 @@ package paintswing;
 
 import java.awt.Color;
 import paintswing.figure.Circle;
+import paintswing.figure.EnumFigure;
+import paintswing.figure.Figure;
 import paintswing.figure.Line;
 import paintswing.figure.Rectangle;
 
 /**
- *
- * @author drako597
- */
+*
+* @author drako597
+* @version 1.0
+* 
+*/
 class DrawManager {
 
 	protected Area area;
-	protected String figle = "Line";
+	protected String figle = "LINE";
 	protected Color color;
+	
 
     public DrawManager(Area area) {
         this.area = area;
     }
 
-    public void draw(int x, int y, int x2, int y2) {
-        switch (figle) {
+    public void draw(Point point) {
+      /*  switch (figle) {
             case "Line":
                 area.figle.add(new Line(x, y, x2, y2, color));
                 break;
@@ -36,8 +41,9 @@ class DrawManager {
             default:
                 // area.figle.add(new Line(x, y, x2, y2, color));
                 break;
-        }
-
+        }*/
+    	point.setColor(color);
+    	area.figle.add(EnumFigure.valueOf(figle).create(point));
         area.repaint();
     }
 

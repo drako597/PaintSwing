@@ -7,9 +7,11 @@ package paintswing.figure;
 import java.awt.Graphics2D;
 
 /**
- *
- * @author drako597
- */
+*
+* @author drako597
+* @version 1.0
+* 
+*/
 public interface Figure {
 
     public void draw(Graphics2D g);

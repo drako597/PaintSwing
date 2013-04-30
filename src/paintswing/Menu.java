@@ -11,19 +11,26 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- *
- * @author drako597
- */
+*
+* @author drako597
+* @version 1.0
+* 
+*/
 public class Menu {
 	protected Paint paint;
 	protected JMenuBar bar = new JMenuBar();
 	protected FileDialog dialogWindow;
 	protected DrawManager drawManager;
-
+	
+	/**
+	 * 
+	 * @param drawManager
+	 * @param paint
+	 */
     public Menu(final DrawManager drawManager, Paint paint) {
         this.paint=paint;
         this.drawManager = drawManager;
-        //Menu Plik
+        
         JMenu file = new JMenu("Plik");
         JMenuItem open, save, saveAs, exit;
         file.add(open = new JMenuItem("Otwóż"));
@@ -81,7 +88,7 @@ public class Menu {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                drawManager.setStringFigle("Line");
+                drawManager.setStringFigle("LINE");
             }
         });
         draw.add(circle = new JMenuItem("Koło"));
@@ -89,7 +96,7 @@ public class Menu {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                drawManager.setStringFigle("Circle");
+                drawManager.setStringFigle("CIRCLE");
             }
         });
         draw.add(rectangle = new JMenuItem("Prostokont"));
@@ -97,7 +104,7 @@ public class Menu {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                drawManager.setStringFigle("Rectangle");
+                drawManager.setStringFigle("RECTANGLE");
             }
         });
         bar.add(draw);
