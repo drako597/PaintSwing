@@ -4,7 +4,6 @@
  */
 package paintswing.figure;
 
-import java.awt.Color;
 import java.awt.Graphics2D;
 
 import paintswing.Point;

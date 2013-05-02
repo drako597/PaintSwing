@@ -4,7 +4,6 @@
  */
 package paintswing;
 
-import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -28,6 +27,7 @@ public class AreaMouseListner extends MouseAdapter {
     public void mousePressed(MouseEvent e) {
         x = e.getX();
         y = e.getY();
+        
     }
 
     @Override

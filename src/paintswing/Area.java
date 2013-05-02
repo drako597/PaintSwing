@@ -5,8 +5,12 @@
 package paintswing;
 
 import java.awt.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Observable;
+import java.util.Observer;
+
 import javax.swing.JPanel;
 import paintswing.figure.*;
 
@@ -16,14 +20,20 @@ import paintswing.figure.*;
 * @version 1.0
 * 
 */
-class Area extends JPanel {
+class Area extends JPanel implements Observer, Serializable{
 
-    private final Collection<Figure> figle = new ArrayList<>();
-    Image img;
-
-    public Area() {
-        super();
-        setBackground(Color.WHITE);
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7541442990117025210L;
+	private final Collection<Figure> figle = new ArrayList<>();
+    private Settings settings;
+    public Area(Settings settings) {
+    	settings.addObserver(this);
+    	this.settings=settings;
+    	
+        setSize(settings.getWightAera(), settings.getHeightAera());
+        setBackground(settings.getBackgraundCollor());
 
     }
 
@@ -38,10 +48,22 @@ class Area extends JPanel {
     void clear() {
         figle.removeAll(figle);
         this.repaint();
+       
     }
 
-	public Collection<Figure> getCollectionFigle() {
+
+	@Override
+	public void update(Observable o, Object arg) {
+		// TODO Auto-generated method stub
+		setBackground(settings.getBackgraundCollor());
+		this.repaint();
+		
+	}
+
+	public Collection<Figure> getCollectionFigure() {
 		// TODO Auto-generated method stub
 		return figle;
 	}
+	
+
 }

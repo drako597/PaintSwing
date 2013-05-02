@@ -20,9 +20,9 @@ public class Point {
 	public Point(int x, int y,int x2,int y2) {
 		// TODO Auto-generated constructor stub
 		this.x=x;
-		this.x2=x2;
+		this.x2=x-x2;
 		this.y=y;
-		this.y2=y2;
+		this.y2=y2-y;
 		this.color=Color.BLACK;
 		
 	}

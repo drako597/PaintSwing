@@ -7,11 +7,8 @@ package paintswing;
 import java.awt.Color;
 import java.util.Collection;
 
-import paintswing.figure.Circle;
 import paintswing.figure.EnumFigure;
 import paintswing.figure.Figure;
-import paintswing.figure.Line;
-import paintswing.figure.Rectangle;
 
 /**
 *
@@ -29,7 +26,7 @@ class DrawManager {
 
     public DrawManager(Area area) {
        this.area = area;
-       collectionFigle= area.getCollectionFigle();
+       collectionFigle= area.getCollectionFigure();
     }
 
     public void draw(Point point) {

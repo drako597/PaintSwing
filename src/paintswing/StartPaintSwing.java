@@ -24,7 +24,7 @@ public class StartPaintSwing {
 
             @Override
             public void run() {
-                Paint paint = new Paint();
+                 new Paint();
 
 
             }

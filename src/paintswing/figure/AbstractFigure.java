@@ -6,6 +6,7 @@ package paintswing.figure;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.io.Serializable;
 
 import paintswing.Point;
 
@@ -15,7 +16,7 @@ import paintswing.Point;
 * @version 1.0
 * 
 */
-public abstract class AbstractFigure implements Figure {
+public abstract class AbstractFigure implements Figure, Serializable {
 
 	protected int width;
 	protected int height;
